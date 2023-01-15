@@ -1,15 +1,46 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 :root{
-    --backgroundColor: #ff1c1c;
+    --backgroundColor: #f1c304;
+    --detalleColor: #2e67b0;
+    --marginGeneral: 30px 10%;
+    --bordePrueba: 2px solid red;
+}
+
+body{
+    background-color: var(--backgroundColor);
 }
 
 header{
-    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    margin: var(--marginGeneral);
+
+}
+
+.logo{
+    width: 350px;
+}
+
+.logo img{
     width: 100%;
-    height: 100vh;
+    object-fit: cover;
+}
+
+.container__form{
+    margin: var(--marginGeneral);
+}
+
+.container__form input{
+    padding: 20px;
+    background-color: transparent;
+    height: 30px;
+    width: 250px;
+    color: var(--detalleColor);
+    border-radius: 20px;
+
 }
