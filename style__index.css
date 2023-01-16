@@ -54,3 +54,32 @@ header{
 .container__form input:focus {
     outline:none;
 }
+
+.pokemonCard{
+    border: 4px solid #5287cc;
+    background-color: #5287cc;
+    border-radius: 10px;
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction:row-reverse;
+    position: relative;
+    justify-content:space-between;
+}
+
+.pokemonCardImage{
+    width: 200px;
+    position: absolute;
+    top: -50px;
+    right: -70px;
+}
+
+.pokemonCardImage img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.pokemonCardInfo{
+    width: 100%;
+    height: 100px;
+}

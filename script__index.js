@@ -34,16 +34,24 @@ const createPokemonCard = (json) =>{
     const pokemonCardImage = document.createElement("div");
     const pokemonCardInfo = document.createElement("div");
     const pokemonImageEl = document.createElement("img");
+    const pokemonCardNameEl = document.createElement("h2");
+    const pokemonCardTypeEl = document.createElement("p");
 
     pokemonCard.classList.add("pokemonCard");
     pokemonCardImage.classList.add("pokemonCardImage");
     pokemonCardInfo.classList.add("pokemonCardInfo");
+
     pokemonImageEl.src = pokemonImage;
 
     containerPokemonCards.appendChild(pokemonCard);
     pokemonCard.appendChild(pokemonCardImage);
     pokemonCard.appendChild(pokemonCardInfo);
     pokemonCardImage.appendChild(pokemonImageEl);
+    pokemonCardInfo.appendChild(pokemonCardNameEl);
+    pokemonCardInfo.appendChild(pokemonCardTypeEl);
+
+    pokemonCardNameEl.innerHTML = pokemonName;
+    pokemonCardTypeEl.innerHTML = pokemonType;
 }
 
 
