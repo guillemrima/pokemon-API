@@ -69,6 +69,8 @@ header{
     flex-direction:row-reverse;
     position: relative;
     justify-content:space-between;
+    opacity: 0;
+    animation: fadeIn 1000ms forwards;
 }
 
 .pokemonCardImage{
@@ -76,6 +78,9 @@ header{
     position: absolute;
     top: -50px;
     right: -70px;
+    opacity: 0;
+    animation: fadeIn 1000ms forwards;
+    animation-delay: 500ms;
 }
 
 .pokemonCardImage img{
@@ -90,4 +95,13 @@ header{
     height: 100px;
     text-align: center;
     padding: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
