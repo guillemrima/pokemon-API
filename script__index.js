@@ -1,32 +1,53 @@
 //DECLARAMOS EL FORM
 const formularioPokemon = document.getElementById("formulario__pokemon");
+const containerPokemonCards = document.getElementById("container__cards"); 
+let pokemon;
+
 
 const escogerPokemon = (data) => {
     data.preventDefault();
-    var pokemon = document.getElementById("input__pokemon").value;
+    pokemon = document.getElementById("input__pokemon").value;
+    generarPokeAPI();
+    formularioPokemon.reset();
+}
 
+const generarPokeAPI = () =>{
     var pokeAPI = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
     fetch(pokeAPI).then(res =>{
-        res.json().then(data =>{
-            console.log(data)
-        })
-    })
+    res.json().then(data =>{
+    console.log(data)
+    createPokemonCard(data);
+})
+})
+}
 
-    console.log(pokemon);
-    formularioPokemon.reset();
+const createPokemonCard = (json) =>{
+    const pokemonName = json.name;
+    const pokemonType = json.types[0].type.name;
+    const pokemonImage = json.sprites.front_default;
+
+    console.log(pokemonName);
+    console.log(pokemonType);
+    console.log(pokemonImage);
+
+    const pokemonCard = document.createElement("div");
+    const pokemonCardImage = document.createElement("div");
+    const pokemonCardInfo = document.createElement("div");
+    const pokemonImageEl = document.createElement("img");
+
+    pokemonCard.classList.add("pokemonCard");
+    pokemonCardImage.classList.add("pokemonCardImage");
+    pokemonCardInfo.classList.add("pokemonCardInfo");
+    pokemonImageEl.src = pokemonImage;
+
+    containerPokemonCards.appendChild(pokemonCard);
+    pokemonCard.appendChild(pokemonCardImage);
+    pokemonCard.appendChild(pokemonCardInfo);
+    pokemonCardImage.appendChild(pokemonImageEl);
 }
 
 
 
-//PREGUNTAR COMO PUEDO USAR LA VAR POKEMON EN OTRA FUNCION
-//const generarPokeAPI = () =>{
-//     var pokeAPI = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-//    fetch(pokeAPI).then(res =>{
-//        res.json(),then(data =>{
-//            console.log(data)
-//            hydratePokemon(data);
-//        })
-//    })
-//}
+
 
 formularioPokemon.addEventListener("submit", escogerPokemon);
