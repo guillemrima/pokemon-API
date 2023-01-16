@@ -41,15 +41,14 @@ header{
 }
 
 .container__form input{
-    padding: 20px;
+    padding: 15px;
     width: 280px;
-    font-size: 15px;
+    font-size: 19px;
     text-align: center;
     border-width: 3px;
-    border-color: #2e67b0;
     background-color: #ebbc00;
     color: white;
-    border-style: solid;
+    border: 3px solid #2e67b0;
     border-radius: 20px;
 
 }
