@@ -121,7 +121,7 @@ header{
     height: 100px;
     text-align: center;
     padding: 5px;
-    padding-right: 40px;
+    padding-right: 100px;
 
 }
 
@@ -162,5 +162,26 @@ header{
     }
     to {
         transform: translateX(0px);
+    }
+}
+
+@media  screen and (min-width: 1400px) {
+    .container__cards{
+        margin: 0px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .pokemonCard{
+        border: 4px solid #1a293e;
+        background-color: #5287cc;
+        border-radius: 10px;
+        width: 270px;
+        display: flex;
+        flex-direction:row-reverse;
+        position: relative;
+        justify-content:space-between;
+        opacity: 0;
+        animation: fadeIn 1000ms forwards;
     }
 }
