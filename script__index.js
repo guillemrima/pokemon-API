@@ -36,26 +36,29 @@ const createPokemonCard = (json) =>{
     const pokemonImageEl = document.createElement("img");
     const pokemonCardNameEl = document.createElement("h2");
     const pokemonCardTypeEl = document.createElement("p");
+    const pokemonRemove = document.createElement("div");
 
     pokemonCard.classList.add("pokemonCard");
     pokemonCardImage.classList.add("pokemonCardImage");
     pokemonCardInfo.classList.add("pokemonCardInfo");
+    pokemonRemove.classList.add("pokemonRemove");
 
     pokemonImageEl.src = pokemonImage;
 
     containerPokemonCards.appendChild(pokemonCard);
     pokemonCard.appendChild(pokemonCardImage);
     pokemonCard.appendChild(pokemonCardInfo);
+    pokemonCard.appendChild(pokemonRemove);
     pokemonCardImage.appendChild(pokemonImageEl);
     pokemonCardInfo.appendChild(pokemonCardNameEl);
     pokemonCardInfo.appendChild(pokemonCardTypeEl);
 
     pokemonCardNameEl.innerHTML = pokemonName;
     pokemonCardTypeEl.innerHTML = pokemonType;
+
+    pokemonRemove.addEventListener("click", function(){
+        pokemonCard.parentNode.removeChild(pokemonCard);
+    })
 }
-
-
-
-
 
 formularioPokemon.addEventListener("submit", escogerPokemon);
