@@ -7,6 +7,7 @@ let pokemon;
 const escogerPokemon = (data) => {
     data.preventDefault();
     pokemon = document.getElementById("input__pokemon").value;
+    pokemon = pokemon.toLowerCase();
     generarPokeAPI();
     formularioPokemon.reset();
 }

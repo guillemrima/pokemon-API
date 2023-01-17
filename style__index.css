@@ -63,6 +63,10 @@ header{
     background-color: #caa201;
 }
 
+.container__form input::placeholder{
+    color: white;
+}
+
 .container__form .boton{
     margin-top: 10px;
     padding: 5px;
@@ -78,9 +82,7 @@ header{
 
 .container__cards{
     display: flex;
-    flex-direction:column-reverse;
-    
-    
+    flex-direction:column-reverse;   
 }
 
 .pokemonCard{
@@ -114,12 +116,23 @@ header{
 
 .pokemonCardInfo{
     width: 100%;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid rgb(224, 222, 222);
     border-radius: 7px;
     height: 100px;
     text-align: center;
     padding: 5px;
-    border: var(--bordePrueba);
+    padding-right: 40px;
+
+}
+
+.pokemonCardInfo h2{
+    color: white;
+    font-size: 2em;
+}
+
+.pokemonCardInfo p{
+    color: white;
+    font-size: 1.5em;
 }
 
 .pokemonRemove{
