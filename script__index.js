@@ -2,14 +2,19 @@
 const formularioPokemon = document.getElementById("formulario__pokemon");
 const containerPokemonCards = document.getElementById("container__cards"); 
 let pokemon;
+let pokemonType;
 
 
 const escogerPokemon = (data) => {
     data.preventDefault();
     pokemon = document.getElementById("input__pokemon").value;
     pokemon = pokemon.toLowerCase();
+    pokemonType = document.getElementById("input__pokemonType").value;
+    pokemonType = pokemonType.toLowerCase();
+
     generarPokeAPI();
     formularioPokemon.reset();
+    console.log(pokemonType);
 }
 
 const generarPokeAPI = () =>{
