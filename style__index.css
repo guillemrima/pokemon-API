@@ -69,6 +69,21 @@ header{
     color: white;
 }
 
+#input__pokemonType{
+    font-size: 1em;
+    margin: 10px;
+    background-color: var(--backgroundColor);
+    color: white;
+    padding: 5px;
+    border: 2px solid var(--detalleColor);
+    border-radius: 20px;
+    text-align: centers;
+}
+option{
+    background-color: white;
+    color: var(--backgroundColor);
+}
+
 .descripcionInput p{
     color: white;
     font-size: 1.1m;
